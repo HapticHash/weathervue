@@ -28,8 +28,8 @@ npm run lint
 # Tasks
 
 * [x] Generate Vue app with CLI
-  * [ ] Start App
-* [ ] Add Bootstrap CDN
+  * [x] Start App
+* [x] Add Bootstrap CDN
 * [ ] Add navbar with title
 * [ ] Signup for DarkSky API
   * [ ] Get API Key
