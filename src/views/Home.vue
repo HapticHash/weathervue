@@ -7,7 +7,11 @@
 <script>
   import API from '@/lib/API';
 
+
 export default {
   name: 'home',
+  mounted() {
+    API.getForecast();
+  }
 };
 </script>

@@ -35,7 +35,7 @@ npm run lint
   * [x] Get API Key
 * [x] Create API module
   * [x] Create function to call API with hard coded lat long
-* [ ] Call API in mounted method of component
+* [x] Call API in mounted method of component
 * [ ] Add current weather to page
 * [ ] Add emojis
 * [ ] Allow user to enter location
