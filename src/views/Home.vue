@@ -6,8 +6,9 @@
        <div class="card border-primary mb-3">
         <div class="card-header">Current Weather</div>
         <div class="card-body">
-          <h4 class="card-title">{{forecast.currently.icon}}</h4>
-          <p class="card-text">{{forecast.currently.summary}} {{forecast.currently.temperature}} °F</p>
+          <h4 class="card-title"> <skycon condition="rain" width="100" height="100" /> </h4>
+          <p class="card-text">{{forecast.currently.summary}}</p>
+          <p class="card-text">{{forecast.currently.temperature}} °F</p>
         </div>
       </div>
       </div>
@@ -17,22 +18,31 @@
 </template>
 
 <script>
-  import API from '@/lib/API';
-
+import API from '@/lib/API';
 
 export default {
   name: 'home',
   data() {
-    return  {
+    return {
       forecast: {},
-      icons: {},
+      icons: {
+        'clear-day': 'clear-day',
+        'clear-night': '', 
+        rain: '', 
+        snow: '', 
+        sleet: '', 
+        wind: '', 
+        fog: '', 
+        cloudy: '', 
+        'partly-cloudy-day': '',  
+        'partly-cloudy-night': 'partly-cloudy-night'
+      },
     };
   },
   mounted() {
-    API.getForecast().then(result => {
-      console.log(result);
+    API.getForecast().then((result) => {
       this.forecast = result;
     });
-  }
+  },
 };
 </script>
