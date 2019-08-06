@@ -6,7 +6,9 @@
        <div class="card border-primary mb-3">
         <div class="card-header">Current Weather</div>
         <div class="card-body">
-          <h4 class="card-title"> <skycon condition="rain" width="100" height="100" /> </h4>
+          <h4 class="card-title">
+            <skycon :condition="forecast.currently.icon" width="100" height="100" />
+          </h4>
           <p class="card-text">{{forecast.currently.summary}}</p>
           <p class="card-text">{{forecast.currently.temperature}} °F</p>
         </div>
@@ -25,18 +27,6 @@ export default {
   data() {
     return {
       forecast: {},
-      icons: {
-        'clear-day': 'clear-day',
-        'clear-night': '', 
-        rain: '', 
-        snow: '', 
-        sleet: '', 
-        wind: '', 
-        fog: '', 
-        cloudy: '', 
-        'partly-cloudy-day': '',  
-        'partly-cloudy-night': 'partly-cloudy-night'
-      },
     };
   },
   mounted() {
