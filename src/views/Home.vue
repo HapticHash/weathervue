@@ -2,7 +2,16 @@
   <div class="home">
     <h1>Home</h1>
     <div class="row">
-      <div class="col-8 offset-2 text-center">
+      <div class="col-8 offset-2 ">
+        <div class="input-group mb-3">
+          <input v-model="location" type="text" class="form-control" placeholder="Enter a location" aria-label="Enter Location" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button @click="updateLocation" class="btn btn-success" type="button" id="button-addon2">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8 offset-2 text-center" v-if="forecast">
        <div class="card border-primary mb-3">
         <div class="card-header">Current Weather</div>
         <div class="card-body">
@@ -26,13 +35,21 @@ export default {
   name: 'home',
   data() {
     return {
+      location: null,
       forecast: {},
     };
   },
   mounted() {
-    API.getForecast().then((result) => {
+    API.getForecast('37.8267','-122.4233').then((result) => {
       this.forecast = result;
     });
+  },
+  methods: {
+    updateLocation() {
+      API.getCoordinates(this.location).then(result => {
+        console.log(result);
+      })
+    }
   },
 };
 </script>
