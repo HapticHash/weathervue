@@ -41,10 +41,8 @@ npm run lint
 * [x] Allow user to enter location
   * [x] Geocode location to lat long
   * [x] Update weather on page
-* [ ] Show location name
-* [ ] Add weather map to page
-* [ ] Show upcoming forecast
-
+* [x] Show location name
+* [ ] UI improvements
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
