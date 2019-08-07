@@ -36,11 +36,11 @@ npm run lint
 * [x] Create API module
   * [x] Create function to call API with hard coded lat long
 * [x] Call API in mounted method of component
-* [ ] Add current weather to page
-* [ ] Add emojis
-* [ ] Allow user to enter location
-  * [ ] Geocode location to lat long
-  * [ ] Update weather on page
+* [x] Add current weather to page
+* [x] Add emojis
+* [x] Allow user to enter location
+  * [x] Geocode location to lat long
+  * [x] Update weather on page
 * [ ] Show location name
 * [ ] Add weather map to page
 * [ ] Show upcoming forecast

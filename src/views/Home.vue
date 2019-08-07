@@ -40,16 +40,19 @@ export default {
     };
   },
   mounted() {
-    API.getForecast('37.8267','-122.4233').then((result) => {
-      this.forecast = result;
-    });
+    this.loadWeather('37.8267', '-122.4233');
   },
   methods: {
+    loadWeather(lat, lng) {
+      API.getForecast(lat, lng).then((result) => {
+        this.forecast = result;
+      });
+    },
     updateLocation() {
-      API.getCoordinates(this.location).then(result => {
-        console.log(result);
-      })
-    }
+      API.getCoordinates(this.location).then((result) => {
+        this.loadWeather(result.latitude, result.longitude);
+      });
+    },
   },
 };
 </script>
