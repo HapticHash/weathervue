@@ -23,7 +23,7 @@
           <p class="card-text addr"> {{address}}</p>
           <p class="card-text"> {{forecast.currently.summary}} </p>
           <h4 class="card-title mt-4">
-            <skycon :condition="forecast.currently.icon"  />
+            <skycon :condition="forecast.currently.icon" width="100" height="100" />
           </h4>
         </div>
       </div>
@@ -78,6 +78,10 @@ export default {
 .locBox, .forecast {
   margin: 1.5em auto 0;
   outline: none;
+}
+.card {
+  /* box-shadow: 10px 10px 90px -43px rgba(34,34,34,0.59); */
+  box-shadow: 10px 12px 30px -5px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .header {
   margin: 1em 0;
