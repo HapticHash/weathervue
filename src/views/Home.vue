@@ -11,19 +11,25 @@
       </div>
 
       <div class="col-8 offset-2 text-center" v-if="forecast">
-       <div class="card border-primary mb-3">
-        <div class="card-header"> {{address}} </div>
+       <div class="card mb-3">
+        <div class="row header"> 
+          <div class="col-3"> <font-awesome-icon icon="cloud" /> {{forecast.currently.cloudCover*100}}% </div>
+          <div class="col-3"> <font-awesome-icon icon="wind" /> {{forecast.currently.windSpeed}} km/h </div>
+          <div class="col-3"> <font-awesome-icon icon="eye" /> {{forecast.currently.visibility}} km </div>
+          <div class="col-3"> <font-awesome-icon icon="tint" /> {{forecast.currently.precipProbability*100}}% </div>
+        </div>
         <div class="card-body">
+          <p class="card-text temp">{{ Math.round((forecast.currently.temperature - 32) * 5 / 9) }}°C</p>
+          <p class="card-text"> <font-awesome-icon icon="map-marker-alt" /> {{address}}</p>
+          <p class="card-text"> <font-awesome-icon icon="info-circle" /> {{forecast.currently.summary}} </p>
           <h4 class="card-title">
             <skycon :condition="forecast.currently.icon" width="100" height="100" />
           </h4>
-          <p class="card-text">{{forecast.currently.summary}}</p>
-          <p class="card-text">{{forecast.currently.temperature}} °F</p>
         </div>
       </div>
       </div>
     </div>
-    <!-- <pre>{{forecast}}</pre> -->
+    <pre>{{forecast}}</pre>
   </div>
 </template>
 
@@ -63,3 +69,22 @@ export default {
   },
 };
 </script>
+
+<style>
+*{
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+}
+.header {
+  margin: 1em 0;
+}
+.card-text {
+  font-size: 1.1em;
+  font-family: 'Montserrat', serif;
+}
+.temp {
+  font-size: 6em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+</style>

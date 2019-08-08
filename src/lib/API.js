@@ -22,5 +22,7 @@ function getForecast(lat, lng) {
 }
 
 export default {
-  getForecast, getCoordinates, getAddress,
+  getForecast,
+  getCoordinates,
+  getAddress,
 };
