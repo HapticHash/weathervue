@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="row">
-      <div class="col-8 offset-2 ">
+      <div class="col-8 locBox">
         <div class="input-group mb-3">
           <input v-model="location" type="text" class="form-control" placeholder="Enter a location" aria-label="Enter Location" aria-describedby="button-addon2">
           <div class="input-group-append">
@@ -10,26 +10,26 @@
         </div>
       </div>
 
-      <div class="col-8 offset-2 text-center" v-if="forecast">
+      <div class="col-8 text-center forecast" v-if="forecast">
        <div class="card mb-3">
         <div class="row header"> 
-          <div class="col-3"> <font-awesome-icon icon="cloud" /> {{forecast.currently.cloudCover*100}}% </div>
+          <div class="col-3"> <font-awesome-icon icon="cloud" /> {{forecast.currently.cloudCover*100}} % </div>
           <div class="col-3"> <font-awesome-icon icon="wind" /> {{forecast.currently.windSpeed}} km/h </div>
           <div class="col-3"> <font-awesome-icon icon="eye" /> {{forecast.currently.visibility}} km </div>
-          <div class="col-3"> <font-awesome-icon icon="tint" /> {{forecast.currently.precipProbability*100}}% </div>
+          <div class="col-3"> <font-awesome-icon icon="tint" /> {{Math.round(forecast.currently.precipProbability*100)}} % </div>
         </div>
         <div class="card-body">
           <p class="card-text temp">{{ Math.round((forecast.currently.temperature - 32) * 5 / 9) }}°C</p>
-          <p class="card-text"> <font-awesome-icon icon="map-marker-alt" /> {{address}}</p>
-          <p class="card-text"> <font-awesome-icon icon="info-circle" /> {{forecast.currently.summary}} </p>
-          <h4 class="card-title">
-            <skycon :condition="forecast.currently.icon" width="100" height="100" />
+          <p class="card-text addr"> {{address}}</p>
+          <p class="card-text"> {{forecast.currently.summary}} </p>
+          <h4 class="card-title mt-4">
+            <skycon :condition="forecast.currently.icon"  />
           </h4>
         </div>
       </div>
       </div>
     </div>
-    <pre>{{forecast}}</pre>
+    <!-- <pre>{{forecast}}</pre> -->
   </div>
 </template>
 
@@ -75,12 +75,20 @@ export default {
   font-family: 'Montserrat', serif;
   font-weight: 500;
 }
+.locBox, .forecast {
+  margin: 1.5em auto 0;
+  outline: none;
+}
 .header {
   margin: 1em 0;
 }
 .card-text {
   font-size: 1.1em;
   font-family: 'Montserrat', serif;
+}
+.addr {
+  font-size: 1.6em;
+  font-weight: 600;
 }
 .temp {
   font-size: 6em;
