@@ -5,7 +5,7 @@
         <div class="input-group mb-3">
           <input v-model="location" type="text" class="form-control" placeholder="Enter a location" aria-label="Enter Location" aria-describedby="button-addon2">
           <div class="input-group-append">
-            <button @click="updateLocation" class="btn btn-success" type="button" id="button-addon2">Search</button>
+            <button @click="updateLocation" class="btn btn-success" type="button" id="button-addon2"> <font-awesome-icon icon="search" /> </button>
           </div>
         </div>
       </div>
@@ -80,7 +80,11 @@ export default {
   margin: 1.5em auto 0;
   outline: none;
 }
-input{
+.input-group{
+  margin-top: 1em;
+  border-radius: .8em 0 0 .8em;
+}
+.form-control{
   mix-blend-mode: difference;
 }
 .card {

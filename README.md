@@ -41,6 +41,7 @@ npm run lint
   * [x] Geocode location to lat long
   * [x] Update weather on page
 * [x] Show location name
+* [x] Dark Mode
 * [ ] UI improvements
 
 ### Customize configuration
