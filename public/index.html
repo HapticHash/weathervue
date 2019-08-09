@@ -9,11 +9,28 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Montserrat&display=swap" rel="stylesheet"> 
   </head>
-  <body>
+  <body >
     <noscript>
       <strong>We're sorry but weathervue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+
+  <script>
+    var options = {
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#efefef',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#efefef', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+
+  </script>
 </html>

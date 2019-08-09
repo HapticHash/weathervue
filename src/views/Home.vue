@@ -30,6 +30,7 @@
       </div>
     </div>
     <!-- <pre>{{forecast}}</pre> -->
+
   </div>
 </template>
 
@@ -79,8 +80,12 @@ export default {
   margin: 1.5em auto 0;
   outline: none;
 }
+input{
+  mix-blend-mode: difference;
+}
 .card {
   /* box-shadow: 10px 10px 90px -43px rgba(34,34,34,0.59); */
+  mix-blend-mode: difference;
   box-shadow: 10px 12px 30px -5px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .header {
