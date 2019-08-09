@@ -83,16 +83,12 @@ export default {
 }
 .input-group{
   margin-top: 1em;
-  border-radius: .8em 0 0 .8em;
 }
 .form-control{
   mix-blend-mode: difference;
   color: #000;
+  border-radius: 0.8em 0 0 0.8em;
 }
-
-input[type=text]:focus { outline: 0 !important; }
-button:focus { outline: 0 !important; }
-
 .card {
   border-radius: 0.8em;
   mix-blend-mode: difference;

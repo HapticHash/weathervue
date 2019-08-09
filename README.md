@@ -42,7 +42,8 @@ npm run lint
   * [x] Update weather on page
 * [x] Show location name
 * [x] Dark Mode
-* [ ] UI improvements
+* [x] UI improvements
+* [ ] Deploy
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
