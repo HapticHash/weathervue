@@ -73,6 +73,7 @@ export default {
 
 <style>
 *{
+  color: #000;
   font-family: 'Montserrat', serif;
   font-weight: 500;
 }
@@ -86,11 +87,15 @@ export default {
 }
 .form-control{
   mix-blend-mode: difference;
+  color: #000;
 }
+
+input[type=text]:focus { outline: 0 !important; }
+button:focus { outline: 0 !important; }
+
 .card {
-  /* box-shadow: 10px 10px 90px -43px rgba(34,34,34,0.59); */
+  border-radius: 0.8em;
   mix-blend-mode: difference;
-  box-shadow: 10px 12px 30px -5px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .header {
   margin: 1em 0;
