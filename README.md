@@ -1,31 +1,17 @@
 # weathervue
+A weather app made with DarkSky API and Vue JS. It shows various things such as cloud cover, wind speed, visibility, chances of precipitation, current temperature, weather summary with an animated weather icon.
 
-## Project setup
-```
-npm install
-```
+##  :mag_right: Project Overview -
+![Layout](https://HapticHash.github.io/TKDesigns/design/extras/weatherPreview.png)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## :hammer: Built with -
 
-### Run your tests
-```
-npm run test
-```
+* [DarkSky API](https://www.darksky.net/) - Its is the most accurate source of hyperlocal weather information.
+* [Vue JS](https://vuejs.org/) - The Progressive JavaScript Framework.
+* [Dark Mode JS](https://darkmodejs.learn.uno/) - This library uses the css mix-blend-mode in order to bring Dark-mode to any of your websites.
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-# Tasks
+# :checkered_flag: Tasks
 
 * [x] Generate Vue app with CLI
   * [x] Start App
@@ -43,7 +29,7 @@ npm run lint
 * [x] Show location name
 * [x] Dark Mode
 * [x] UI improvements
-* [ ] Deploy
+* [x] Deploy
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
